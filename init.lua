@@ -1,7 +1,5 @@
 print"advent of neovim"
 
-require"config.lazy"
-
 vim.keymap.set("n", "<space>xx", "<cmd>source %<cr>")
 vim.keymap.set("n", "<space>x", ":.lua<cr>")
 vim.keymap.set("v", "<space>x", ":lua<cr>")
@@ -11,7 +9,12 @@ vim.opt.listchars = "tab:▸ ,eol:¬,extends:❯,precedes:❮,space:·"
 vim.opt.list = true
 vim.opt.showbreak = "↪"
 vim.opt.visualbell = true -- No noise just flash
+
+-- Let's annoy everyone with my random numbers
+vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
 
 vim.opt.clipboard = 'unnamedplus'
 
@@ -41,3 +44,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
         vim.highlight.on_yank()
     end
 })
+
+require"config.lazy"
+
