@@ -1,9 +1,3 @@
-print"advent of neovim"
-
-vim.keymap.set("n", "<space>xx", "<cmd>source %<cr>")
-vim.keymap.set("n", "<space>x", ":.lua<cr>")
-vim.keymap.set("v", "<space>x", ":lua<cr>")
-
 vim.opt.showmatch = true -- Highlight matching pair
 vim.opt.listchars = "tab:▸ ,eol:¬,extends:❯,precedes:❮,space:·"
 vim.opt.list = true
